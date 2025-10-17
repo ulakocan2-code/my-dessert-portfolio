@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Юлія — Портфоліо кондитера</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff7f8;
+      --card:#ffffff;
+      --accent:#e8aeb6;
+      --text:#2b2b2b;
+      --muted:#7a6f73;
+      --shadow: 0 6px 18px rgba(38,20,26,0.08);
+      --radius:16px;
+      --max-w:1100px;
+      --gap:24px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+      background:linear-gradient(180deg,var(--bg),#fff);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--max-w);margin:0 auto;padding:48px 20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#ffdfe6,#ffeef3);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display';font-weight:700;color:#6b2b34}
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .cta{background:var(--accent);padding:10px 16px;border-radius:12px;color:#6b2b34;font-weight:700;text-decoration:none}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;margin-top:36px}
+    .hero-left h1{font-family:'Playfair Display';font-size:44px;margin:0 0 12px}
+    .lead{color:var(--muted);font-size:16px;margin-bottom:20px}
+    .btn-row{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:12px;background:#fff;border:1px solid rgba(0,0,0,0.06);text-decoration:none;color:var(--text);font-weight:600}
+    .hero-card{background:var(--card);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+    .hero-card img{width:100%;height:260px;object-fit:cover;border-radius:12px}
+
+    section{margin-top:48px}
+    h2{font-family:'Playfair Display';font-size:22px;margin:0 0 14px}
+    p{margin:0 0 12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+    .card{background:var(--card);padding:16px;border-radius:14px;box-shadow:var(--shadow)}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .service{display:flex;gap:12px;align-items:flex-start}
+    .icon{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fff0f2,#fff6f7);display:flex;align-items:center;justify-content:center;font-weight:700;color:#8a2e3a}
+
+    .quote{font-style:italic;padding:18px;border-left:4px solid var(--accent);background:linear-gradient(180deg,rgba(232,174,182,0.06),transparent);border-radius:10px}
+
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    input,textarea,select{padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);font-size:14px}
+    textarea{grid-column:1/-1;min-height:120px}
+    .full{grid-column:1/-1}
+    .submit{background:var(--accent);border:none;padding:12px;border-radius:12px;font-weight:700;color:#6b2b34}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .services{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">Ю</div>
+        <div>
+          <div style="font-weight:700">Юлія — кондитер</div>
+          <div style="font-size:12px;color:var(--muted)">витончені десерти та авторські рецепти</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Про мене</a>
+        <a href="#portfolio">Портфоліо</a>
+        <a href="#services">Послуги</a>
+        <a href="#contacts" class="cta">Замовити</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Десерти, що розповідають історії</h1>
+          <p class="lead">Кожен торт, тарт чи мусовий десерт створюється з думкою про ваш момент — естетика, смак і увага до деталей.</p>
+          <div class="btn-row">
+            <a class="btn" href="#portfolio">Переглянути роботи</a>
+            <a class="btn" href="#services">Послуги</a>
+          </div>
+          <div style="margin-top:18px;color:var(--muted);font-size:14px" class="quote">"Випічка — це не просто рецепт, це мистецтво малювати смачно, поєднувати гармонійно і організовувати красиво."</div>
+        </div>
+        <aside class="hero-card">
+          <img src="https://static.vkusnyblog.com/img3x4/uploads/2021/10/klukvennyi-tort-s-maskarpone.jpg" alt="Десерт">
+          <div style="margin-top:12px;font-weight:700">Авторські мусові торти</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Легкі текстури, чисті смаки і естетична подача.</div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <h2>Про мене</h2>
+        <p>Я — Юлія, кондитер. Працюю заступником бренд-шефа, контролюю HACCP і якість виробництва, а також створюю авторські десерти на замовлення. Мій підхід — мінімалізм, чистота смаку та візуальна гармонія.</p>
+      </section>
+
+      <section id="portfolio">
+        <h2>Портфоліо</h2>
+        <div class="gallery">
+          <img src="https://static.vkusnyblog.com/img3x4/uploads/2021/10/klukvennyi-tort-s-maskarpone.jpg" alt="1">
+          <img src="https://cake.shoko.com.ua/wp-content/uploads/2024/05/IMG_20240515_100435_027-optimized.jpg" alt="2">
+          <img src="https://obakery.kyiv.ua/wp-content/uploads/2024/02/tort-s-babochkami-e1708160013552.jpg" alt="3">
+          <img src="https://content3.flowwow-images.com/data/flowers/1000x1000/38/1720600418_7963038.jpg" alt="4">
+          <img src="https://ukraineflora.com/upload/products/115/Happy_Birthday_Cake_Delivery_Photo_1.jpeg" alt="5">
+          <img src="https://cake.shoko.com.ua/wp-content/uploads/2024/10/IMG_20241106_103124_015-1-optimized.jpg" alt="6">
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>
